@@ -1,25 +1,74 @@
-Your application will be an Enterprise Knowledge & Policy Assistant.
+# Enterprise Knowledge and Policy Assistant
 
-Imagine a company has documents such as:
+A RAG-based enterprise knowledge assistant that allows users to ask questions about company policies and receive answers grounded in internal documents.
 
-company_policy.pdf
-leave_policy.pdf
-security_policy.pdf
-employee_handbook.pdf
-remote_work_sop.pdf
+## Architecture
 
-An employee should be able to ask something like:
+User
+↓
+Streamlit Frontend
+↓
+FastAPI Backend
+↓
+RAG Pipeline
+↓
+ChromaDB Vector Database
+↓
+Llama 3.2 Local LLM
 
-"How many days of annual leave can an employee take?"
+## Technologies Used
 
-And instead of the LLM answering from its general knowledge, our system should:
+- Python
+- LangChain
+- Sentence Transformers
+- all-MiniLM-L6-v2
+- ChromaDB
+- FastAPI
+- Uvicorn
+- Streamlit
+- Ollama
+- Llama 3.2
 
-Employee Question
-       ↓
-Find relevant information in company documents
-       ↓
-Give that information to the LLM
-       ↓
-Generate an answer based on those documents
-       ↓
-Show the source of the answer
+## RAG Pipeline
+
+1. Load enterprise policy documents.
+2. Split documents into smaller chunks.
+3. Add metadata such as source and document type.
+4. Generate embeddings using all-MiniLM-L6-v2.
+5. Store embeddings and metadata in ChromaDB.
+6. Convert the user's question into an embedding.
+7. Retrieve the most relevant document chunks.
+8. Pass the retrieved context to Llama 3.2.
+9. Generate an answer grounded in the retrieved documents.
+10. Return the answer along with the source documents.
+
+## Project Structure
+
+```text
+Enterprise Knowledge and Policy Assistant/
+│
+├── app/
+│   ├── api/
+│   │   └── main.py
+│   │
+│   ├── generation/
+│   │   └── rag.py
+│   │
+│   ├── ingestion/
+│   │   └── chunker.py
+│   │
+│   ├── retrieval/
+│   │   ├── embedding.py
+│   │   ├── search.py
+│   │   └── vector_store.py
+│   │
+│   └── frontend.py
+│
+├── data/
+│   └── documents/
+│
+├── chroma_db/
+│
+├── .gitignore
+├── requirements.txt
+└── Readme.md

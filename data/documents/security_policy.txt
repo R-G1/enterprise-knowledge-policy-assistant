@@ -1,0 +1,41 @@
+INFORMATION SECURITY POLICY
+
+1. Purpose
+
+This policy defines basic security practices employees must follow when accessing and handling company information and systems.
+
+2. Password Requirements
+
+Employees must use strong, unique passwords for company accounts. Passwords must not be shared with other employees or stored in plain text. Employees should use the company's approved password-management solution when available.
+
+3. Multi-Factor Authentication
+
+Multi-factor authentication (MFA) must be enabled for systems and services that require it. Employees must not approve an MFA request that they did not initiate.
+
+4. Confidential Information
+
+Confidential company information must only be accessed by authorized employees for legitimate business purposes. Employees must not send confidential information to personal email accounts or unauthorized external recipients.
+
+5. Devices
+
+Company devices must be protected with the required security controls, including screen locking and approved endpoint protection. Employees must report lost or stolen company devices promptly.
+
+6. Phishing and Suspicious Messages
+
+Employees should not open suspicious attachments, click unknown links, or provide credentials in response to unexpected requests. Suspicious messages should be reported through the company's approved security-reporting process.
+
+7. Security Incidents
+
+Any suspected security incident, unauthorized access, data exposure, or lost company device must be reported to the security or IT team as soon as possible.
+
+8. Remote Access
+
+Employees accessing company systems remotely must use approved access mechanisms and follow the organization's remote-work security requirements.
+
+9. Access Control
+
+Employees should only access systems, applications, and information necessary for their assigned responsibilities. Access must not be shared with another person.
+
+10. Contact
+
+Security questions and suspected incidents should be reported to the IT or Information Security team.
